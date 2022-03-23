@@ -19,7 +19,9 @@ public class ConsumerApplicationGeneric {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(ConsumerApplicationGeneric.class, args);
+        // dubbo 应用配置
         ApplicationConfig applicationConfig = context.getBean(ApplicationConfig.class);
+        // dubbo 注册中心配置
         RegistryConfig registryConfig = context.getBean(RegistryConfig.class);
 
         // 引用远程服务
